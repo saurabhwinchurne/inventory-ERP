@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid px-4">
+    <h3 class="text-center  mt-3">{{title}}</h3>
+
+    <div class="card">
+        <div class="card-body">
+            <form class="row g-4">
+                <div class="col-md-4">
+                    <label  class="form-label"><strong>Vendor Name</strong></label>
+                    <select id="vendorName"  class="form-select">
+                        <option>Choose...</option>
+                        <option>vendor a</option>
+                        <option>vendor b</option>
+                        <option>vendor c</option>
+                        <option>vendor d</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label"><strong>Address</strong></label>
+                    <input id="address" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label"><strong>DateTime</strong></label>
+                    <input id="dateTime" class="form-control" type="date">
+                </div>
+
+                <div class="col-md-4">
+                    <label  class="form-label"><strong>Part Name</strong></label>
+                    <select id="partName"  class="form-select">
+                        <option selected>Choose...</option>
+                        <option>prod a</option>
+                        <option>prod b</option>
+                        <option>prod c</option>
+                        <option>prod d</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label"><strong>Quantity</strong></label>
+                    <input id="quantity"  class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label"><strong>Invoice No.</strong></label>
+                    <input id="invoiceNo"  class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <a id="addtobill" class="btn btn-primary btn-sm" action="submit">Add to Bill</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Part Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-primary btn-sm" href="\#">Save Bill</a>
+                <a class="btn btn-primary btn-sm" href="\inwards">Discard Bill</a>
+            </div>   
+        </div>
+    </div>    
+</div>
+
+<script src="{{url_for('static', filename='js/custome/inwards_add.js')}}"></script>
+{% endblock %}
