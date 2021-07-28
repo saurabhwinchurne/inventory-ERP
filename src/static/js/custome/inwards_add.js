@@ -1,9 +1,7 @@
 var add = document.getElementById("addtobill");
 add.addEventListener("click", displayDetails);
 
-var table = document.getElementById("datatablesSimple")
-table.addEventListener("click", onDeleteRow);
-
+//function to add new rows to table
 var row = 1;
 function  displayDetails(){
     var partNumber = document.getElementById("vendorName").value
@@ -15,6 +13,9 @@ function  displayDetails(){
 
     var dispay = document.getElementById("datatablesSimple")
     var newRow = dispay.insertRow(row);
+    newRow.setAttribute('id', row)
+
+
 
     var cell1 = newRow.insertCell(0);
     var cell2 = newRow.insertCell(1);
@@ -32,8 +33,9 @@ function  displayDetails(){
     cell3.innerHTML = description;
     cell4.innerHTML = quantity;
 
-    var btn = document.createElement("a");
-    btn.setAttribute("class", "btn btn-danger btn-sm");
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "btn btn-danger btn-sm btn_delete_row");
+    btn.setAttribute("type", "button");
 
     var icon = document.createElement("i");
     icon.setAttribute("class", "fa fa-trash");
@@ -44,10 +46,10 @@ function  displayDetails(){
     row++;
 }
 
-function onDeleteRow(e){
-    if (e.target.classList.contains("btn btn-danger btn-sm")){
-        return;
-    }
-    var del = e.target;
-    del.closest("tr").remove();   
-}
+
+//jquery to delete the rows from table
+$(document).ready(function($){
+    $(document).on("click", ".btn_delete_row", function(e){
+        var r = $(this).closest("tr").remove()
+    })
+})

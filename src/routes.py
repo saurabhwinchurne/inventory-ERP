@@ -19,3 +19,7 @@ def inwards():
 @views.route('/inwards/create')
 def inwards_create():
     return render_template('inwards_create.html', title='Inwards')
+
+@views.route('/outwards')
+def outwards():
+    return render_template('outwards.html', title='Outwards')
