@@ -4,38 +4,305 @@
 
 <div class="container-fluid px-4">
     <h3 class="text-center mt-3">{{title}}</h3>
-    
-    <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Dispatch</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">History</button>
-        </div>
-    </nav>
 
-    <div class="tab-content" id="nav-tabContent">
+    <div class="tabbable boxed parentTabs">
+        <!--1st tab-->
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#set1" class="nav-link active">Dispatch</a>
+            </li>
+            <li><a href="#set2" class="nav-link">History</a>
+            </li>
+        </ul>
+        <!--sub tabs-->
+        <div class="tab-content px-4 py-4">
+            <!--dispatch cotent-->
+            <div class="tab-pane fade show active" id="set1">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#sub11" class="nav-link active">Product</a>
+                        </li>
+                        <li><a href="#sub12" class="nav-link">Part</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="sub11">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="row g-4">
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>DateTime</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
+                        
+                                        <div class="col-md-4">
+                                            <label  class="form-label"><strong>Product</strong></label>
+                                            <select id="partName"  class="form-select">
+                                                <option selected>Choose...</option>
+                                                <option>prod a</option>
+                                                <option>prod b</option>
+                                                <option>prod c</option>
+                                                <option>prod d</option>
+                                            </select>
+                                        </div>
+                        
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>Quantity</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Transport Mode</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Dispatch To</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Invoice No.</strong></label>
+                                            <input id="invoiceNo"  class="form-control">
+                                        </div>
 
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="card">
-                <div class="card-body">
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Dispatch</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">History</button>
+                                        <div class="col-md-6">
+                                            <label class="form-label"><strong>Remark</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-4">
+                                            <a id="addtobill" class="btn btn-primary btn-sm" action="submit">Dispatch</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                    </nav>
+                        <div class="tab-pane fade" id="sub12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="row g-4">
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>DateTime</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
+                        
+                                        <div class="col-md-4">
+                                            <label  class="form-label"><strong>Part</strong></label>
+                                            <select id="partName"  class="form-select">
+                                                <option selected>Choose...</option>
+                                                <option>prod a</option>
+                                                <option>prod b</option>
+                                                <option>prod c</option>
+                                                <option>prod d</option>
+                                            </select>
+                                        </div>
+                        
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>Quantity</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Transport Mode</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Dispatch To</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                                        
+                                        <div class="col-md-2">
+                                            <label class="form-label"><strong>Invoice No.</strong></label>
+                                            <input id="invoiceNo"  class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label"><strong>Remark</strong></label>
+                                            <input id="quantity"  class="form-control">
+                                        </div>
+                        
+                                        <div class="col-md-4">
+                                            <a id="addtobill" class="btn btn-primary btn-sm" action="submit">Dispatch</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>    
-        </div>
+            </div>
 
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-           
-        </div>
+            <!--history content-->
+            <div class="tab-pane fade" id="set2">
+                <!--dispatch history tabs-->
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#sub21" class="nav-link active">Products</a>
+                        </li>
+                        <li><a href="#sub22" class="nav-link">Parts</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active in" id="sub21">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="row g-4">
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>Start</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
 
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>End</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
+
+                                        <div class="col-md-3 col align-self-end">
+                                            <a id="addtobill" class="btn btn-primary" action="submit">Submit</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="sub22">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="row g-4">
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>Start</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label class="form-label"><strong>End</strong></label>
+                                            <input id="dateTime" class="form-control" type="date">
+                                        </div>
+
+                                        <div class="col-md-3 col align-self-end">
+                                            <a id="addtobill" class="btn btn-primary" action="submit">Submit</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--dispatch history table-->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Recived Bills
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Part Number</th>
+                                    <th>Part Name</th>
+                                    <th>Description</th>
+                                    <th>Stock Quantity</th>
+                                    <th>Unit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </div>
+            
+        </div>
     </div>
 </div>
 
+<script>
+    $("ul.nav-tabs a").click(function (e) {
+  e.preventDefault();  
+    $(this).tab('show');
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename='js/datatables-simple-demo.js')}}"></script>
 {% endblock %}
